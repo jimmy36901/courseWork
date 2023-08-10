@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CourseWork</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #f0f0f0;
+      }
+
+      .container {
+        text-align: center;
+      }
+      .container img {
+        width: 500px;
+        height: 500px;
+        border-radius: 50%;
+      }
+
+      .button_box {
+        margin-top: 20px;
+      }
+
+      .color-button {
+        width: 50px;
+        height: 50px;
+        border: 1 solid black;
+        border-radius: 50%;
+        margin: 0 5px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img id="image" src="./fireball.png" alt="" />
+      <div class="button_box">
+        <button class="color-button" style="background-color: red"></button>
+        <button class="color-button" style="background-color: yellow"></button>
+        <button class="color-button" style="background-color: blue"></button>
+      </div>
+    </div>
+    <script>
+      const imageElement = document.getElementById("image");
+      const colorButtons = document.querySelectorAll(".color-button");
+
+      colorButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const backgroundColor = button.style.backgroundColor;
+          imageElement.style.backgroundColor = backgroundColor;
+        });
+      });
+    </script>
+  </body>
+</html>
